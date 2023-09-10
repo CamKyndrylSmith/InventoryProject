@@ -13,6 +13,6 @@
   tasks:
   - name: add host to existing group
     add_host:     
-      name: "{{ external_ip }}"
+      name: 172.16.25.23
       groups: windows_group
     delegate_to: localhost
