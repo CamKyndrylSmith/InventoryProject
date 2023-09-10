@@ -1,7 +1,7 @@
 # ------------------------------------------------
 # Camerons Ansible PlayBook 
 #
-# Adding an existing inventory to a play book 
+# Adding an existing inventory to a play book .
 # ------------------------------------------------
 - name: Add inventory to a group
   gather_facts: false
