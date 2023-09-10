@@ -1,0 +1,17 @@
+# ------------------------------------------------
+# Camerons Ansible PlayBook 
+#
+# Adding an existing inventory to a play book 
+# ------------------------------------------------
+- name: Add inventory to a group
+  gather_facts: false
+  hosts: all
+  vars: 
+    external_ip: '172.16.25.23'
+
+  tasks:
+  - name: add host to existing group
+    add_host:     
+      name: "{{ external_ip }}"
+      groups: windows_group
+    delegate_to: localhost
